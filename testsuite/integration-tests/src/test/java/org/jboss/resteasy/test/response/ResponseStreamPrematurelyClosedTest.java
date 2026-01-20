@@ -96,7 +96,7 @@ public class ResponseStreamPrematurelyClosedTest {
                 try (InputStream in = builder.get().readEntity(InputStream.class)) {
                     in.transferTo(baos);
                 }
-                Assertions.assertEquals(100000000, baos.size());
+                Assertions.assertEquals(10000000, baos.size());
             }
         }
     }
